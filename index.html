@@ -1,1 +1,232 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Meniu</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Parisienne&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --gold:#b69367;
+    --gold-light:#d8c1a0;
+    --paper:#fffdf9;
+    --text:#8f7350;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:linear-gradient(135deg,#f4f0ea,#ece6de);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.menu{
+    width:430px;
+    max-width:100%;
+    background:var(--paper);
+    position:relative;
+    padding:70px 45px;
+    color:var(--text);
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.08),
+    0 2px 10px rgba(0,0,0,.05);
+
+    border:1px solid rgba(182,147,103,.15);
+}
+
+.menu::before{
+    content:"";
+    position:absolute;
+    inset:12px;
+    border:1px solid rgba(182,147,103,.25);
+    pointer-events:none;
+}
+
+    .flower-top{
+    position:absolute;
+    top:18px;
+    left:-1px;
+    width:180px;
+    height:auto;
+    opacity:.25;
+
+    transform: scaleX(-1) scaleY(-1);
+}
+
+.flower-bottom{
+    position:absolute;
+    right:0px;
+    bottom:18px;
+    width:180px;
+    height:auto;
+    opacity:.25;
+
+    transform: none;
+}
+.menu-logo{
+    display: block;
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 30px;
+}
+.section{
+    text-align:center;
+    margin-bottom:42px;
+}
+
+.section:last-child{
+    margin-bottom:0;
+}
+
+.title{
+    font-family:'Parisienne',cursive;
+    color:var(--gold);
+    font-size:54px;
+    font-weight:400;
+    margin-bottom:14px;
+}
+
+.divider{
+    width:55px;
+    height:1px;
+    background:rgba(182,147,103,.45);
+    margin:0 auto 18px;
+}
+
+.item{
+    font-size:1.7rem;
+    line-height:1.45;
+    margin:2px 0;
+    font-weight:300;
+}
+
+@media(max-width:600px){
+
+    .menu{
+        padding:55px 25px;
+    }
+
+    .title{
+        font-size:44px;
+    }
+
+    .item{
+        font-size:1.35rem;
+    }
+
+    .flower-top,
+    .flower-bottom{
+        width:90px;
+        height:90px;
+    }
+}
+
+@media print{
+
+    body{
+        background:white;
+        padding:0;
+    }
+
+    .menu{
+        box-shadow:none;
+        border:none;
+        width:100%;
+        max-width:none;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="menu">
+
+<img src="FLOARE.png" class="flower-top" alt="">
+<img src="FLOARE.png" class="flower-bottom" alt="">
+
+<img src="NURAF.png" class="menu-logo" alt="NURA Wedding Events">
+
+<!-- APERITIV -->
+
+<section class="section">
+<h2 class="title">Aperitiv</h2>
+<div class="divider"></div>
+
+<div class="item">Crispy de pui</div>
+<div class="item">Bărcuță cu ciuperci sote</div>
+<div class="item">Chifteluță</div>
+<div class="item">Doboș</div>
+<div class="item">Ardei cu brânză fină</div>
+<div class="item">și susan negru</div>
+<div class="item">Mini șnițel</div>
+<div class="item">Frigărui de măsline</div>
+<div class="item">Bruschette cu roșii și busuioc</div>
+<div class="item">Ruladă de porc cu legume</div>
+<div class="item">Bușeuri cu vinete</div>
+<div class="item"> Cârnăciori ardenelești </div>
+
+</section>
+
+<!-- CIORBĂ -->
+
+<section class="section">
+<h2 class="title">Ciorbă</h2>
+<div class="divider"></div>
+
+<div class="item">Ciorbă ardelenească de porc</div>
+</section>
+
+<!-- FEL PRINCIPAL -->
+
+<section class="section">
+<h2 class="title">Fel principal</h2>
+<div class="divider"></div>
+
+<div class="item">Ceafă de porc la sous-vide</div>
+<div class="item">cu sos demiglace</div>
+<div class="item">Tivoli de pui</div>
+<div class="item">Cartofi gratinați</div>
+<div class="item">Baby morcovi</div>
+<div class="item">Broccoli</div>
+<div class="item">Salată varză proaspătă</div>
+</section>
+
+<!-- DESERT -->
+
+<section class="section">
+<h2 class="title">Desert</h2>
+<div class="divider"></div>
+
+<div class="item">Felie de tort</div>
+</section>
+
+<!-- CINĂ -->
+
+<section class="section">
+<h2 class="title">Cină</h2>
+<div class="divider"></div>
+
+<div class="item">Sărmăluțe cu mămăliguță </div>
+<div class="item">si ciolan</div>
+</section>
+
+</div>
+
+</body>
+</html>
